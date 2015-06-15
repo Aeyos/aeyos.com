@@ -8,12 +8,12 @@ app.config(['$stateProvider', function($stateProvider) {
 			controller: 'mainHomeCtrl'
 		}).
 		state('store', {
-			url: 'store/',
+			url: '/store',
 			templateUrl: 'scripts/controllers/store/store.html',
 			controller: 'mainStoreCtrl'
 		}).
 		state('about', {
-			url: 'about',
+			url: '/about',
 			templateUrl: 'scripts/controllers/about/about.html',
 			controller: 'mainAboutCtrl'
 		});

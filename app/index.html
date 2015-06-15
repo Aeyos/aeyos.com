@@ -16,26 +16,30 @@
 	
 	<!-- CONTROLLERS -->
 		<script src="scripts/main.js"></script>
+		<script src="scripts/controllers/header/header.js"></script>
 		<script src="scripts/controllers/store/store.js"></script>
 		<script src="scripts/controllers/about/about.js"></script>
 		<script src="scripts/controllers/home/home.js"></script>
 	<!-- STYLES -->
 		<link rel="stylesheet" type="text/css" href="styles/index.css">
+		<link rel="stylesheet" type="text/css" href="styles/all.css">
 </head>
 <body data-ng-app="aeyos.com">
-	<div class="header">
+	<div class="header" id="header" data-ng-controller="headerCtrl">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="banner"></div>
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="#">Aeyos.com</a>
 				</div>
 				<ul class="nav navbar-nav">
-					<li><a ui-sref="home">Home</a></li>
-					<li><a ui-sref="store">Store</a></li>
-					<li><a ui-sref="about">About</a></li>
+					<li><a ui-sref="home"><span class="glyphicon glyphicon-home"></span>&nbsp&nbspHome</a></li>
+					<li><a ui-sref="store"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp&nbspStore</a></li>
+					<li><a ui-sref="about"><span class=" glyphicon glyphicon-question-sign"></span>&nbsp&nbspAbout</a></li>
 				</ul>
 			</div>
 		</nav>
+		<div class="clearfix"></div>
 	</div>
 	<div class="content">
 		<div ui-view></div>
@@ -43,6 +47,8 @@
 	<div class="footer">
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
+				<br/>
+				<span class="copyright-message">2015 &copy Vinícius Marcelo Negrão</span>
 			</div>
 		</nav>
 	</div>
