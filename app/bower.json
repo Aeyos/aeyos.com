@@ -1,0 +1,24 @@
+{
+  "name": "aeyos.com",
+  "version": "0.0.0",
+  "homepage": "https://github.com/aeyos/aeyos.com",
+  "authors": [
+    "Aeyos <vinicius.m.negrao@hotmail.com>"
+  ],
+  "main": "scripts/main.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "angular": "~1.4.0"
+  },
+  "devDependencies": {
+    "angular-ui-router": "~0.2.15"
+  }
+}

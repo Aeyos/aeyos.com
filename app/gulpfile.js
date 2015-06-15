@@ -9,10 +9,10 @@ var gulp = require('gulp'),
 		uglify = require('gulp-uglify');
 
 var paths = {
-	scripts: './app/scripts/*.js',
-	images: './app/images/*',
-	styles: './app/styles/*.less',
-	index: './app/*.html'
+	scripts: './scripts/**/*.js',
+	images: './images/*',
+	styles: './styles/*.less',
+	index: './*.html'
 };
 
 // TASKS
@@ -23,7 +23,7 @@ gulp.task('clean', function(cb) {
 
 gulp.task('connect', function() {
 	connect.server({
-		root: 'app',
+		root: '.',
 		livereload: true
 	});
 });
@@ -43,17 +43,18 @@ gulp.task('images', ['clean'], function() {
 gulp.task('less', function() {
 	return gulp.src(paths.styles)
 		.pipe(less())
-		.pipe(gulp.dest('css'))
-		.pipe(livereload());
+		.pipe(gulp.dest('styles'))
+		.pipe(connect.reload());
 });
 
 gulp.task('scripts', ['clean'], function() {
-	return gulp.src(paths.scripts)
+	return gulp.src(paths.scripts,{base:'scripts'})
 		.pipe(sourcemaps.init())
 			.pipe(uglify())
 			.pipe(concat('all.min.js'))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('build/js'));
+		.pipe(gulp.dest('build/js'))
+		.pipe(connect.reload());
 });
 
 gulp.task('watch', function () {

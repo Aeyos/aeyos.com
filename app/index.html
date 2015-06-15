@@ -2,10 +2,49 @@
 <html>
 <head>
 	<title>Aeyos.com</title>
+
+	<!-- BOWER COMPONENTS -->
+		<!-- ANGULAR -->
+		<script src="bower_components/angular/angular.js"></script>
+		<!-- ANGULAR COMPONENTS -->
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<!-- JQUERY -->
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<!-- BOOTSTRAP -->
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	
+	<!-- CONTROLLERS -->
+		<script src="scripts/main.js"></script>
+		<script src="scripts/controllers/store/store.js"></script>
+		<script src="scripts/controllers/about/about.js"></script>
+		<script src="scripts/controllers/home/home.js"></script>
+	<!-- STYLES -->
+		<link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
-<body>
-	<div class="header">-- header --</div>
-	<div class="content">-- content --</div>
-	<div class="footer">-- footer --</div>
+<body data-ng-app="aeyos.com">
+	<div class="header">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Aeyos.com</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a ui-sref="home">Home</a></li>
+					<li><a ui-sref="store">Store</a></li>
+					<li><a ui-sref="about">About</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="content">
+		<div ui-view></div>
+	</div>
+	<div class="footer">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+			</div>
+		</nav>
+	</div>
 </body>
 </html>
