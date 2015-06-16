@@ -1,0 +1,6 @@
+app/node_modules/
+app/bower_components/
+Design/
+node console*
+shirtData*
+.git

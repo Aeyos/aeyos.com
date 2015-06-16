@@ -12,7 +12,7 @@ var paths = {
 	scripts: './scripts/**/*.js',
 	images: './images/*',
 	styles: './styles/*.less',
-	index: './*.html'
+	index: './**/*.html'
 };
 
 // TASKS
@@ -23,7 +23,7 @@ gulp.task('clean', function(cb) {
 
 gulp.task('connect', function() {
 	connect.server({
-		root: '.',
+//		root: '.',
 		livereload: true
 	});
 });

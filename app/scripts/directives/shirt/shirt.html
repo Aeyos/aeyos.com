@@ -1,0 +1,25 @@
+<div style="
+	width: 256px;
+	height: 256px">
+	<div style="
+		overflow: hidden;
+		border-radius: 100%">
+		<img style="height:256px" src="{{ref.src}}">
+	</div>
+	<div style="
+		width: 96px;
+		height: 96px;
+		border-radius: 100%;
+		overflow: hidden;
+		position: relative;
+		top: -96px;
+		left: 160px;
+		background-color: rgb(216, 45, 74);
+		color: white;
+		padding-top: 32px;
+		text-align: center;
+		font-size:1.5em;
+		font-weight: bold;">
+		<span data-ng-bind="::ref.price | number:2"></span>
+	</div>
+</div>
